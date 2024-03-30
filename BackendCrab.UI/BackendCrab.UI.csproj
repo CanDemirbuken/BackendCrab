@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BackendCrab.BusinessLayer\BackendCrab.BusinessLayer.csproj" />
+    <ProjectReference Include="..\BackendCrab.Core\BackendCrab.Core.csproj" />
+    <ProjectReference Include="..\BackendCrab.DataAccessLayer\BackendCrab.DataAccessLayer.csproj" />
+  </ItemGroup>
+
+</Project>

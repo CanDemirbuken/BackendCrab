@@ -1,0 +1,39 @@
+﻿@model List<EmployeeDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<a class="btn btn-primary" asp-controller="Employee" asp-action="Save">Save Employee</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Title</td>
+            <td>Company</td>
+            <td>Created Date</td>
+            <td>Updated Date</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Title</td>
+                <td>@item.Company.Name</td>
+                <td>@item.CreatedDate</td>
+                <td>@item.UpdatedDate</td>
+                <td><a class="btn btn-warning" asp-controller="Employee" asp-action="Update" asp-route-id="@item.Id">Update</a></td>
+                <td><a class="btn btn-danger" asp-controller="Employee" asp-action="Remove" asp-route-id="@item.Id">Delete</a></td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+﻿@model CompanyDTO
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Update Company</h1>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Company" asp-action="Update" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group pt-2">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-group pt-2">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" />
+                <span class="text-danger" asp-validation-for="Address"></span>
+            </div>
+
+            <div class="form-group pt-2">
+                <label asp-for="Phone"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span class="text-danger" asp-validation-for="Phone"></span>
+            </div>
+
+            <div class="form-group pt-2">
+                <label asp-for="FoundationYear"></label>
+                <input asp-for="FoundationYear" class="form-control" />
+                <span class="text-danger" asp-validation-for="FoundationYear"></span>
+            </div>
+
+            <div class="form-group pt-2">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
